@@ -12,6 +12,7 @@ export default function renderOption(opt, idx = 0) {
     reactKey,
     value,
     label,
+    selected,
   } = opt;
 
   return (
@@ -19,6 +20,7 @@ export default function renderOption(opt, idx = 0) {
       key={reactKey ? `${reactKey}-${idx}` : `opt-${randomStr()}`}
       value={value}
       className={styles['option']}
+      selected={selected ? 'selected' : ''}
     >
       { label }
     </option>
